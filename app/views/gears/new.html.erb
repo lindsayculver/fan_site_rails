@@ -1,0 +1,15 @@
+<h1>Add gear</h1>
+
+<%= render 'form' %>
+
+<br>
+
+<ul>
+  <% @gears.all.each do |gear| %>
+    <li>
+      <%= gear.year %> <%= gear.brand %> <%= gear.model %> (<%= gear.category %>) |
+      <%= link_to 'Edit', edit_gear_path(gear) %> |
+      <%= link_to 'Delete', gear_path(gear), :data => {:confirm => "You sure", :method => "delete"} %>
+    </li>
+  <% end %>
+</ul>

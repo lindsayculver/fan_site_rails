@@ -1,0 +1,18 @@
+<%= form_for [@gear, @review] do |f| %>
+  <%= f.label :year %>
+  <%= f.select :year, [[2010], [2011], [2012]]%>
+
+  <%= f.label :category %>
+  <%= f.select :category, [['Kites'], ['Boards'], ['Accessories']]%>
+
+  <%= f.label :brand %>
+  <%= f.select :brand, [['Best'], ['Airush'], ['Slingshot']]%>
+
+  <%= f.label :model %>
+  <%= f.text_field :model%>
+
+  <%= f.label :description %>
+  <%= f.text_area :description%>
+
+  <%= f.submit %>
+<% end %>
