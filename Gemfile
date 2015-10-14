@@ -7,7 +7,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'textacular', '~> 3.0'
+gem 'textacular', '~> 3.0', require: 'textacular/rails'
 gem 'bootstrap-sass', '~> 3.3.5'
 
 

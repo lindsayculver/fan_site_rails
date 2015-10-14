@@ -1,0 +1,4 @@
+
+<% @gears.all.each do |gear| %>
+  <li><%= gear.year%> <%= gear.brand %> <%= link_to gear.model, gear_path(gear) %></li>
+<% end %>

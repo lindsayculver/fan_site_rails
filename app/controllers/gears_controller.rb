@@ -1,10 +1,17 @@
 class GearsController < ApplicationController
+
   def index
     @gears = Gear.all
+      if params[:search]
+        @gears = Gear.search(params[:search]).order("created_at DESC")
+      else
+        @gears = Gear.order("created_at DESC")
+      end
+    end
   end
 
   def show
-    @gears = Gear.find(params[:id])
+    @gear = Gear.find(params[:id])
   end
 
   #----------------- CREATE ----------------- #
@@ -51,6 +58,4 @@ class GearsController < ApplicationController
 private
 def gear_params
   params.require(:gear).permit(:year, :model, :brand, :category, :description)
-end
-
 end
