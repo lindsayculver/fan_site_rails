@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
 
   def show
     @gear = Gear.find(params[:gear_id])
-    @reviews = Review.find(params[:id])
+    @review = Review.find(params[:id])
   end
 
   #----------------- CREATE ----------------- #

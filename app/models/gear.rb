@@ -1,7 +1,7 @@
 class Gear < ActiveRecord::Base
   has_many :reviews
 
-  default_scope { order('model ASC')}
+  default_scope { order('brand ASC')}
 
   validates :year, :presence => true
   validates :model, :presence => true

@@ -1,4 +1,12 @@
-<h1><%= @review.title %> by <small><i><%= @review.author %></i></small></h1>
+<h1><%= @review.title %> by <small><i><%= @review.author %></i> <%= time_ago_in_words(@review.created_at) %> ago.</small></h1>
+
+<br>
+
 <p><%= @review.content %></p>
-<p></p>
-<!-- edit link goes here -->
+
+<p>
+  Rating:
+  <% @review.rating.times do %>
+    <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+  <% end %>
+</p>
