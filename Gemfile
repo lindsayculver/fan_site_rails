@@ -9,6 +9,14 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'textacular', '~> 3.0', require: 'textacular/rails'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'font-awesome-sass'
+gem "paperclip", "~> 4.3"
+
+
+# image upload from - http://lifesforlearning.com/uploading-images-with-carrierwave-to-s3-on-rails/
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 
 group :development do

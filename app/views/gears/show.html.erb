@@ -1,9 +1,13 @@
-<h1><%= @gear.year %> <%= @gear.brand%> <%= @gear.model%></h1>
+<h1><%= @gear.year %> <%= @gear.brand%> <%= @gear.model%> <small><%= link_to 'Add Review', new_gear_review_path(@gear) %></small></h1>
+ <%= image_tag @gear.image.url(:large)%>
 
-<%= link_to 'Add Review', new_gear_review_path(@gear) %>
 
 <ul>
   <% @gear.reviews.each do |review| %>
-    <li><%= link_to review.title, gear_review_path(@gear, review) %></li>
+    <li><%= link_to review.title, gear_review_path(@gear, review) %>
+      <% review.rating.times do %>
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      <% end %>
+    </li>
   <% end %>
 </ul>

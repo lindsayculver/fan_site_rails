@@ -1,12 +1,16 @@
-<h1><%= @review.title %> by <small><i><%= @review.author %></i> <%= time_ago_in_words(@review.created_at) %> ago.</small></h1>
+<h1><%= @review.title %> <small> by <i><%= @review.author %></i> <%= time_ago_in_words(@review.created_at) %> ago.</small></h1>
 
 <br>
-
-<p><%= @review.content %></p>
-
+<hr>
+<p><i class="fa fa-quote-right fa-2x"></i> <%= @review.content %></p>
+<hr>
 <p>
   Rating:
   <% @review.rating.times do %>
     <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
   <% end %>
+</p>
+<hr>
+<p>
+  <%= image_tag @gear.image.url(:large)%>
 </p>

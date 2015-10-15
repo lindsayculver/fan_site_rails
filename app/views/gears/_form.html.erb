@@ -11,7 +11,14 @@
   <%= f.label :model %>
   <%= f.text_field :model%> <br>
 
+  <%= f.label :image %>
+  <%= f.file_field :image %>
+
   <%= f.label :description %> <br>
   <%= f.text_area :description%> <br>
+
+  <%= f.label :featured, "Featured?" %>
+  <%= f.check_box :featured %> <br>
+
   <%= f.submit %>
 <% end %>
