@@ -1,0 +1,30 @@
+Is the Github documentation - commits and README - thorough and descriptive?
+// README is missing.
+// Low number of commits.
+
+Is there good spec coverage?
+// No specs written.
+
+Do all specs pass?
+// No specs.
+
+Is the application logic clear and easy to navigate?
+// Seems great but was confusing on how to begin. Lots of choices in navbar.
+
+Can you make a test payment through Stripe?
+// Yup! works perfectly.
+
+Is the site user-friendly?
+//Seems inviting but we can get past admin form.
+
+Are there opportunities for refactoring?
+//The code looks pretty dry, there's one extra test page.
+
+What features stand out?
+// Index view looks really nice, great search bar but couldn't get it to work.
+
+What features could be improved?
+// Adding spec coverage would've helped us get past the first page, route root would be cool.
+
+Do you have any additional constructive criticism or positive feedback to share?
+//Ambitious and impressive schema! Impressive that you attempted to do file upload, would've loved to see it in action. Great job-
