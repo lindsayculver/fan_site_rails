@@ -1,1 +1,9 @@
 <h1><%= @gear.year %> <%= @gear.brand%> <%= @gear.model%></h1>
+
+<%= link_to 'Add Review', new_gear_review_path(@gear) %>
+
+<ul>
+  <% @gear.reviews.each do |review| %>
+    <li><%= link_to review.title, gear_review_path(@gear, review) %></li>
+  <% end %>
+</ul>

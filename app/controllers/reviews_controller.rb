@@ -10,13 +10,14 @@ class ReviewsController < ApplicationController
   def new
     @gear = Gear.find(params[:gear_id])
     @review = @gear.reviews.new
+    render :new
   end
 
   def create
     @gear = Gear.find(params[:gear_id])
     @review = @gear.reviews.new(review_params)
     if @review.save
-      redirect_to new_gear_review_path
+      redirect_to gear_path(@review.gear)
     else
       render :new
     end
@@ -25,4 +26,9 @@ class ReviewsController < ApplicationController
   #----------------- UPDATE ----------------- #
 
 
+
+private
+  def review_params
+    params.require(:review).permit(:title, :content, :author, :rating)
+  end
 end
